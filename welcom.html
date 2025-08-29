@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday 🎉</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      color: #fff;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+      margin-bottom: 20px;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff6ec7, 0 0 20px #ff6ec7; }
+      to { text-shadow: 0 0 20px #ff3cac, 0 0 30px #ff3cac; }
+    }
+
+    .balloon {
+      position: absolute;
+      bottom: -150px;
+      width: 60px;
+      height: 80px;
+      background: red;
+      border-radius: 50% 50% 50% 50%;
+      opacity: 0.8;
+      animation: float 10s linear infinite;
+    }
+
+    .balloon::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      width: 2px;
+      height: 40px;
+      background: #444;
+      transform: translateX(-50%);
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(-110vh) rotate(20deg); }
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 12px 30px;
+      font-size: 1.2rem;
+      color: white;
+      background: #ff3cac;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .btn:hover {
+      background: #ff6ec7;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>🎂 Happy 17th Birthday babee ❤️🎂</h1>
+  <a href="cake.html" class="btn"> chaloo let's start😋 ➝</a>
+
+  <!-- Balloons -->
+  <div class="balloon" style="left:10%; background:#ff6ec7; animation-delay:0s;"></div>
+  <div class="balloon" style="left:30%; background:#ff9a9e; animation-delay:2s;"></div>
+  <div class="balloon" style="left:50%; background:#fbc2eb; animation-delay:4s;"></div>
+  <div class="balloon" style="left:70%; background:#fad0c4; animation-delay:6s;"></div>
+  <div class="balloon" style="left:90%; background:#ffdde1; animation-delay:8s;"></div>
+</body>
+</html>
